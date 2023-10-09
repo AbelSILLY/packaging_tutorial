@@ -1,6 +1,8 @@
 import os
 import pandas as pd
 import pooch
+import sys
+sys.path.append('C:/Users/abels/packaging_tutorial')
 from biketrauma.io import url_db, path_target
 import lzma
 
