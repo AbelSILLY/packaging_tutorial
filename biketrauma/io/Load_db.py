@@ -1,8 +1,6 @@
 import os
 import pandas as pd
 import pooch
-import sys
-sys.path.append('C:/Users/abels/packaging_tutorial')
 from biketrauma.io import url_db, path_target
 import lzma
 
@@ -32,10 +30,10 @@ class Load_db:
 
         # read the compressed file
         with lzma.open(fname_compressed) as f:
-            file_content = f.read().decode("utf-8")
+            file_content = f.read().decode('utf-8')
 
             # write the string file_content to a file named fname_uncompressed
-            with open(fname_uncompressed, "w") as f:
+            with open(fname_uncompressed, 'w') as f:
                 f.write(file_content)
 
         return fname_uncompressed
